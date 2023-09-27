@@ -11,6 +11,11 @@
 		63CDF4162AC1180E00166CD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDF4152AC1180E00166CD8 /* ContentView.swift */; };
 		63CDF4182AC1180E00166CD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63CDF4172AC1180E00166CD8 /* Assets.xcassets */; };
 		63CDF41B2AC1180E00166CD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63CDF41A2AC1180E00166CD8 /* Preview Assets.xcassets */; };
+		63CDF4242AC11A0300166CD8 /* Gong in Frameworks */ = {isa = PBXBuildFile; productRef = 63CDF4232AC11A0300166CD8 /* Gong */; };
+		63CDF4272AC11AA200166CD8 /* Sliders in Frameworks */ = {isa = PBXBuildFile; productRef = 63CDF4262AC11AA200166CD8 /* Sliders */; };
+		63CDF4292AC11F1E00166CD8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDF4282AC11F1E00166CD8 /* MainViewModel.swift */; };
+		63CDF42B2AC2454900166CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDF42A2AC2454900166CD8 /* AppDelegate.swift */; };
+		63CDF42D2AC2551D00166CD8 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDF42C2AC2551D00166CD8 /* EventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,9 @@
 		63CDF4172AC1180E00166CD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63CDF41A2AC1180E00166CD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		63CDF41C2AC1180F00166CD8 /* X32_Master_Volume.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = X32_Master_Volume.entitlements; sourceTree = "<group>"; };
+		63CDF4282AC11F1E00166CD8 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		63CDF42A2AC2454900166CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63CDF42C2AC2551D00166CD8 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CDF4242AC11A0300166CD8 /* Gong in Frameworks */,
+				63CDF4272AC11AA200166CD8 /* Sliders in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +64,9 @@
 			children = (
 				63CDF4132AC1180E00166CD8 /* X32_Master_VolumeApp.swift */,
 				63CDF4152AC1180E00166CD8 /* ContentView.swift */,
+				63CDF42A2AC2454900166CD8 /* AppDelegate.swift */,
+				63CDF42C2AC2551D00166CD8 /* EventMonitor.swift */,
+				63CDF4282AC11F1E00166CD8 /* MainViewModel.swift */,
 				63CDF4172AC1180E00166CD8 /* Assets.xcassets */,
 				63CDF41C2AC1180F00166CD8 /* X32_Master_Volume.entitlements */,
 				63CDF4192AC1180E00166CD8 /* Preview Content */,
@@ -85,6 +98,10 @@
 			dependencies = (
 			);
 			name = "X32 Master Volume";
+			packageProductDependencies = (
+				63CDF4232AC11A0300166CD8 /* Gong */,
+				63CDF4262AC11AA200166CD8 /* Sliders */,
+			);
 			productName = "X32 Master Volume";
 			productReference = 63CDF4102AC1180E00166CD8 /* X32 Master Volume.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +130,10 @@
 				Base,
 			);
 			mainGroup = 63CDF4072AC1180E00166CD8;
+			packageReferences = (
+				63CDF4222AC11A0300166CD8 /* XCRemoteSwiftPackageReference "Gong" */,
+				63CDF4252AC11AA200166CD8 /* XCRemoteSwiftPackageReference "swiftui-sliders" */,
+			);
 			productRefGroup = 63CDF4112AC1180E00166CD8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CDF42B2AC2454900166CD8 /* AppDelegate.swift in Sources */,
+				63CDF42D2AC2551D00166CD8 /* EventMonitor.swift in Sources */,
 				63CDF4162AC1180E00166CD8 /* ContentView.swift in Sources */,
 				63CDF4142AC1180E00166CD8 /* X32_Master_VolumeApp.swift in Sources */,
+				63CDF4292AC11F1E00166CD8 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +303,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +331,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -341,6 +367,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		63CDF4222AC11A0300166CD8 /* XCRemoteSwiftPackageReference "Gong" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dclelland/Gong.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+		63CDF4252AC11AA200166CD8 /* XCRemoteSwiftPackageReference "swiftui-sliders" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spacenation/swiftui-sliders.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		63CDF4232AC11A0300166CD8 /* Gong */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63CDF4222AC11A0300166CD8 /* XCRemoteSwiftPackageReference "Gong" */;
+			productName = Gong;
+		};
+		63CDF4262AC11AA200166CD8 /* Sliders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63CDF4252AC11AA200166CD8 /* XCRemoteSwiftPackageReference "swiftui-sliders" */;
+			productName = Sliders;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63CDF4082AC1180E00166CD8 /* Project object */;
 }

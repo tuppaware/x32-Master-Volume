@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct X32_Master_VolumeApp: App {
+    
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        Settings {
+            EmptyView().frame(width:.zero)
         }
     }
 }
